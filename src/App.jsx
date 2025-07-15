@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import "./App.css";
 
-const API_BASE_URL = "http://localhost:5000/api/water";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "/api/water";
 
 const BOTTLE_SIZES = [
   { name: "Small Glass", size: 200, icon: "🥤" },
