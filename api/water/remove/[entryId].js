@@ -1,6 +1,6 @@
-const { connectDB, WaterEntry } = require("../../utils/db");
+import { connectDB, WaterEntry } from "../../utils/db.js";
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   // Enable CORS
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(

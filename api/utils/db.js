@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 // MongoDB Connection
-const connectDB = async () => {
+export const connectDB = async () => {
   try {
     if (mongoose.connection.readyState === 1) {
       return; // Already connected
@@ -32,7 +32,5 @@ const waterEntrySchema = new mongoose.Schema({
   ],
 });
 
-const WaterEntry =
+export const WaterEntry =
   mongoose.models.WaterEntry || mongoose.model("WaterEntry", waterEntrySchema);
-
-module.exports = { connectDB, WaterEntry };
